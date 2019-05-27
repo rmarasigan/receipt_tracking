@@ -15,7 +15,7 @@ type Invoice struct {
 	Customer      Customer
 	CustomerID    uint
 	Date          time.Time `uadmin:"required"`
-	TotalAmount   string    `uadmin:"required"`
+	TotalAmount   float64   `uadmin:"read_only"`
 }
 
 func (i Invoice) String() string {
